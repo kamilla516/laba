@@ -55,3 +55,82 @@
   
   </body>
 </html>
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+	
+
+//1 treugolnik
+
+ctx.beginPath();
+ctx.moveTo(20,100);
+ctx.lineTo(200,0);
+ctx.lineTo(200,200);
+ctx.closePath();
+ctx.strokeStyle = '#FFC0CB';
+ctx.lineWidth = 3;
+ctx.stroke();
+ctx.fillStyle = '#FFEFD5';
+ctx.fill();
+
+//2 treugolnik
+
+ctx.beginPath();
+ctx.moveTo(20,100);
+ctx.lineTo(80,68);
+ctx.lineTo(80,133);
+ctx.closePath();
+ctx.strokeStyle = '#FFC0CB';
+ctx.lineWidth = 3;
+ctx.stroke();
+ctx.fillStyle = '#FFC0CB';
+ctx.fill();
+
+//1 pryamougolnik
+
+ctx.beginPath();
+ctx.fillStyle = '#FF6699'; 
+ctx.strokeStyle = '#FFC0CB'; 
+ctx.lineWidth = 2;
+
+ctx.fillRect (200, 0, 700, 70);
+ctx.strokeRect(200, 0, 700, 70);
+
+//2 pryamougolnik
+
+ctx.beginPath();
+ctx.fillStyle = '#FF33CC'; 
+ctx.strokeStyle = '#FFC0CB'; 
+ctx.lineWidth = 2;
+
+ctx.fillRect (200, 70, 700, 70);
+ctx.strokeRect(200,70, 700, 70);
+
+//3 pryamougolnik
+
+ctx.beginPath();
+ctx.fillStyle = '#CC0066'; 
+ctx.strokeStyle = '#FFC0CB'; 
+ctx.lineWidth = 2;
+
+ctx.fillRect (200, 140, 700, 60);
+ctx.strokeRect(200, 140, 700, 60);
+ctx.fillStyle = "#FFC0CB";
+ctx.strokeStyle = "#CC0066";
+ctx.font = "italic 30pt Arial";
+ctx.fillText("Карандаш", 200, 300);
+ctx.font = 'bold 30px sans-serif';
+ctx.strokeText("Хусаинова Камилла М-11", 200, 350);
+
+
+</script>
